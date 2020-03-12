@@ -1,0 +1,25 @@
+#index-page {
+  font-family: $primary-font;
+  height: 100vh;
+  color: $primary-colour;
+
+  .container {
+    text-align: center;
+    align-items: center;
+  }
+
+  h1 {
+    font-size: 32px;
+    margin: 16px 0;
+  }
+
+  p {
+    font-size: 20px;
+    margin: 16px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #2661e0;
+  }
+}

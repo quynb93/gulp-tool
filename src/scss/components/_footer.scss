@@ -1,0 +1,13 @@
+footer {
+    &.footer{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        
+        .copy-right {
+            font-size: $font-size-normal!important;
+        }
+    }
+   
+}
