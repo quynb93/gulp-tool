@@ -171,8 +171,8 @@ function watchFiles() {
 
 const build = gulp.series(
   clean,
-  gulp.parallel(styles, vendors, scripts, images, favicon),
-  cacheBust
+  cacheBust,
+  gulp.parallel(styles, vendors, scripts, images, favicon, html),
 );
 
 const watch = gulp.series(build, watchFiles);
