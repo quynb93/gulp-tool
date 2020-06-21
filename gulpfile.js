@@ -16,6 +16,8 @@ const plumber = require("gulp-plumber");
 const fileinclude = require("gulp-file-include");
 const extender = require('gulp-html-extend');
 const cssbeautify = require('gulp-cssbeautify');
+const htmlbeautify = require('gulp-html-beautify');
+const removeEmptyLines = require('gulp-remove-empty-lines');
 
 const paths = {
   html: {
@@ -56,12 +58,13 @@ const cacheBust = () =>
   .pipe(gulp.dest(paths.html.dest));
 
 // Copies all html files
+const optionsHtml = {}
 const html = () =>
   gulp
   .src(paths.html.src)
   .pipe(plumber())
   .pipe(extender({
-    annotations: true,
+    annotations: false,
     verbose: false
   }))
   .pipe(
@@ -70,6 +73,8 @@ const html = () =>
       basepath: "@file",
     })
   )
+  .pipe(htmlbeautify(optionsHtml))
+  .pipe(removeEmptyLines())
   .pipe(gulp.dest(paths.html.dest));
 
 // Convert scss to css, auto-prefix and rename into styles.min.css
