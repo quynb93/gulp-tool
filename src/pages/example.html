@@ -1,6 +1,6 @@
 <!-- @@master = ../layouts/default.html {"title": "Example Page"} -->
 
-<!-- @@block = meta-->
+<!-- @@block = meta -->
 <meta
   name="description"
   content="example"
@@ -9,14 +9,18 @@
   name="keyword"
   content="test keyword example page"
 />
-<!-- @@close-->
+<!-- @@close -->
 
 <!-- @@block = content -->
-<!-- @@include = ../_partials/_header.html -->
-<div class="container">
-  <h1>Example Page</h1>
-  <p>Edit this paragraph and save to watch it reload!</p>
-  <a href="index.html">Go back to the home page</a>
+<div id="example">
+  <!-- @@include = ../_partials/_header.html -->
+  <div class="container">
+    <h1>Example Page</h1>
+    <p>Edit this paragraph and save to watch it reload!</p>
+    <a href="index.html">Go back to the home page</a>
+  </div>
+  <!-- // .container -->
+  <!-- @@include = ../_partials/_footer.html -->
 </div>
-<!-- @@include = ../_partials/_footer.html -->
-<!-- @@close-->
+<!-- // #example -->
+<!-- @@close -->
