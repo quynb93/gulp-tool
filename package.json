@@ -32,6 +32,6 @@
   "dependencies": {
     "gulp-cssbeautify": "^2.0.1",
     "gulp-file-include": "^2.2.2",
-    "gulp-html-extend": "^1.1.6",
+    "gulp-html-extend": "^1.1.6"
   }
 }
